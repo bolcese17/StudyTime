@@ -8,32 +8,38 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
 
-  <body>
+  <body style="text-align: center; margin: auto">
     <form name="courseSearch">
-      <h1>Simple Form</h1>
-      <label for="courseSearch">Enter Course Name: </label><br />
-      <input type="text" id="courseSearch" name="courseSearch" /><br />
-      <input type="submit" value="Submit" />
+      <div class="form-group">
+        <h1>Search Courses</h1>
+        <label for="courseSearch">Enter Course Name: </label><br />
+        <input type="text" id="courseSearch" name="courseSearch" /><br /><br />
+        <input type="button" value="Search" onclick="searchCourses()" />
+        <div id="searchCourseData"></div>
+      </div>
     </form>
     <form name="addCourse">
-      <h1>Please enter data</h1>
-      <label for="courseName">New Course Name: </label>
-      <input required id="courseName" type="text" /> <br />
-      <label for="courseProf">New Course Professor: </label>
-      <input required id="courseProf" type="text" /> <br />
-      <label for="class_t">Time in Class: </label>
-      <input required id="class_t" type="number" /> <br />
-      <label for="assignment_t">Time on Assignments: </label>
-      <input required id="assignment_t" type="number" /> <br />
-      <label for="study_t">Time Studying: </label>
-      <input required id="study_t" type="number" /> <br />
-      <label for="recreation_t">Recreation Time: </label>
-      <input required id="recreation_t" type="number" /> <br />
-      <input type="button" value="Save" onclick="insert()" />
-      <input type="button" value="Show data" onclick="show()" />
+      <div class="form-group">
+        <h1>Enter a new course</h1>
+        <label for="courseName">New Course Name (hours): </label> <br />
+        <input required id="courseName" type="text" /> <br />
+        <label for="courseProf">New Course Professor (hours): </label> <br />
+        <input required id="courseProf" type="text" /> <br />
+        <label for="class_t">Time in Class (hours): </label> <br />
+        <input required id="class_t" type="number" /> <br />
+        <label for="assignment_t">Time on Assignments (hours): </label> <br />
+        <input required id="assignment_t" type="number" /> <br />
+        <label for="study_t">Time Studying (hours): </label> <br />
+        <input required id="study_t" type="number" /> <br />
+        <label for="recreation_t">Recreation Time (hours): </label> <br />
+        <input required id="recreation_t" type="number" /> <br />
+        <br />
+        <input type="button" value="Save" onclick="insert()" />
+      </div>
     </form>
     <br />
     <div id="courseData"></div>

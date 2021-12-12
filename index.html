@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form name="courseSearch">
+      <h1>Simple Form</h1>
+      <label for="courseSearch">Enter Course Name: </label><br />
+      <input type="text" id="courseSearch" name="courseSearch" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <form name="addCourse">
+      <h1>Please enter data</h1>
+      <label for="courseName">New Course Name: </label>
+      <input required id="courseName" type="text" /> <br />
+      <label for="courseProf">New Course Professor: </label>
+      <input required id="courseProf" type="text" /> <br />
+      <label for="class_t">Time in Class: </label>
+      <input required id="class_t" type="number" /> <br />
+      <label for="assignment_t">Time on Assignments: </label>
+      <input required id="assignment_t" type="number" /> <br />
+      <label for="study_t">Time Studying: </label>
+      <input required id="study_t" type="number" /> <br />
+      <label for="recreation_t">Recreation Time: </label>
+      <input required id="recreation_t" type="number" /> <br />
+      <input type="button" value="Save" onclick="insert()" />
+      <input type="button" value="Show data" onclick="show()" />
+    </form>
+    <br />
+    <div id="courseData"></div>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
